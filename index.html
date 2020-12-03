@@ -2,7 +2,8 @@
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/f876073d22.js" crossorigin="anonymous"></script>
 
 <style>
 
@@ -126,18 +127,7 @@ padding: 10px 15px;
     border: 1px solid #1E88E5;
     color: #1E88E5;
 }
-html,
-body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background: #000;
-}
+
 
 .glow-on-hover {
     width: 220px;
@@ -194,7 +184,35 @@ body {
     top: 0;
     border-radius: 10px;
 }
+.moto{
+    width: 100%;
+    height: 80vh;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+.box{
+    width: 100%;
+    height: 50vh;
+    float: left;
+    border: 2px sold pink;  
+}
 
+.round{
+    background-image: linear-gradient(to right, black,rgb(20, 131, 79)
+);
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 83px;
+}
+.round i{
+    color: gold;
+    font-size: 100px;
+}
 @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
@@ -211,7 +229,7 @@ body {
 <body>
 
 <div class="header">
-    <h1>Flora <span style="color: rgb(221, 196, 55);font-size:50px;font-family: 'Texturina', serif;">&</span> Fauna Lands</h1>
+    <h1>Flora <span style="color: gold;font-size:50px;font-family: 'Texturina', serif;">&</span> Fauna Lands</h1>
         <ul>
             <li><a href = "#">BECOME A CONTRIBUTOR</a></li>
             <li><a href = "#">FAUNA</a></li>
@@ -224,41 +242,62 @@ body {
 
 <div class="slideshow-container">
     
-<div class="mySlides fade">
-    <img src="./Images/fauna.jpg" style="width:100%;height:110vh;filter:brightness(80%)">
-  <div class="text">FAUNA</div>
-  <button class="glow-on-hover" type="button">EXPLORE</button>
-</div>
-
-<div class="mySlides fade">
-  <img src="./Images/flora.jpg" style="width:100%;height:110vh;filter:brightness(80%)">
-  <div class="text">FLORA</div>
-  <button class="glow-on-hover" type="button">EXPLORE</button>
-</div>
-
-<div class="mySlides fade">
-  <img src="./Images/flora.jpg" style="width:100%;height:110vh;filter:brightness(80%)">
-    <div class="text">SANCTUARIES</div>
+    <div class="mySlides fade">
+        <img src="./Images/fauna.jpg" style="width:100%;height:100vh;filter:brightness(80%)">
+    <div class="text">FAUNA</div>
     <button class="glow-on-hover" type="button">EXPLORE</button>
-  </div>
-</div>
+    </div>
 
+    <div class="mySlides fade">
+        <img src="./Images/flora.jpg" style="width:100%;height:100vh;filter:brightness(80%)">
+        <div class="text">FLORA</div>
+        <button class="glow-on-hover" type="button">EXPLORE</button>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="./Images/sanc.jpg" style="width:100%;height:100vh;filter:brightness(80%)">
+        <div class="text">SANCTUARIES</div>
+        <button class="glow-on-hover" type="button">EXPLORE</button>
+    </div>
+
+</div>
 <br>
 <div style="text-align:center">
     <span class="dot"></span> 
     <span class="dot"></span> 
     <span class="dot"></span> 
-  </div>
+</div>
  
-  <div class="moto">
+<div class="moto">
     <div class="box">
         <div class="round">
-            <i class="fab fa-canadian-maple-leaf"></i>
-            </div>
-            <h3 style="color: white;">Grow the Green Bed.</h3>
-            <p>Understand the importance of plants and spread greenery.</p>
+            <i class="fa fa-pagelines" aria-hidden="true"></i>
+        </div>
+            <br><h3 style="color: rgb(20, 131, 79);font-family: 'Texturina', serif;text-align: center;">Grow the Green Bed.</h3>
+            <p>Understand the importance of plants with us and spread greenery.</p>
     </div>
-  </div>
+    <div class="box">
+        <div class="round">
+            <i class="fas fa-paw"></i>
+        </div>
+        <br><h3 style="color: rgb(20, 131, 79);font-family: 'Texturina', serif; text-align: center;">Be Friends with Animals</h3>
+            <p>If having a soul means being able to feel love and loyalty and gratitude, then animals are better off than a lot of humans.</p>
+    </div>
+    <div class="box">
+        <div class="round">
+            <i class="fas fa-spa"></i>
+        </div>
+            <br><h3 style="color: rgb(20, 131, 79);font-family: 'Texturina', serif; text-align: center;">Feel the bliss of the nature</h3>
+            <p>Look deep into nature, and then you will understand everything better.</p>
+    </div>
+    <div class="box">
+        <div class="round">
+            <i class="fab fa-evernote"></i>
+        </div>
+            <br><h3 style="color: rgb(20, 131, 79);font-family: 'Texturina', serif; text-align: center;">Save the majestic creatures</h3>
+            <p>If you truly love nature, you will find beauty everywhere.Let's take a tour together and realise its incredible beauty.</p>
+    </div>
+</div>
 
 
 <script>
