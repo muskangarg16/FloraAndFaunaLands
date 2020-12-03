@@ -5,6 +5,8 @@
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Texturina:ital,wght@1,900&display=swap');
 
 * {box-sizing: border-box;
 margin: 0;
@@ -69,7 +71,11 @@ img {vertical-align: middle;}
 .header{
 height: 10vh;
 width:100%;
-background-color: rgb(10, 10, 10);
+background-color: rgb(7, 7, 7);
+position: fixed;
+top: 0;
+left: 0;
+z-index: 100;
 }
 
 .header ul li a {
@@ -84,11 +90,14 @@ background-color: rgb(10, 10, 10);
 }
 .header h1 {
     float: left;
-    color: white;
+    color: brown;
+    line-height: 10vh;
+    font-family: 'Pacifico', cursive;
+
 }
 
 .header ul li a:hover{
-background-color: rgb(17, 107, 80);
+background-color: brown;
 color: black;
 padding: 10px 15px;
 }
@@ -123,7 +132,7 @@ padding: 10px 15px;
 <body>
 
 <div class="header">
-    <h1>Flora & Fauna Lands</h1>
+    <h1>Flora <span style="color: rgb(221, 196, 55);font-size:50px;font-family: 'Texturina', serif;">&</span> Fauna Lands</h1>
         <ul>
             <li><a href = "#">BECOME A CONTRIBUTOR</a></li>
             <li><a href = "#">FAUNA</a></li>
