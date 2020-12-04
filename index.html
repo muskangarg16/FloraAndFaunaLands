@@ -9,9 +9,8 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Texturina:ital,wght@1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Texturina:wght@900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
 
 
@@ -191,21 +190,21 @@ padding: 10px 15px;
 }
 .moto{
     width: 100%;
-    height: 80vh;
+    height: 70vh;
     background-color: white;
     display: flex;
     justify-content: space-evenly;
+
 }
 .box{
     width: 100%;
     height: 50vh;
     float: left;
-    border: 2px solid pink;  
+    padding: 10px 15px;  
 }
 
 .round{
-    background-image: linear-gradient(to right, black,rgb(20, 131, 79)
-);
+    background-image: linear-gradient(to right, black,rgb(20, 131, 79));
     border-radius: 50%;
     height: 200px;
     width: 200px;
@@ -218,6 +217,42 @@ padding: 10px 15px;
     color: gold;
     font-size: 100px;
 }
+.round p{
+    text-align: center;
+    font-size: 10px;
+}
+.types{
+    width: 100%;
+}
+.f1{
+    float: left;
+    width: 50%;
+    height: 10vh;
+    position: relative;
+}
+.f2{
+    float: right;
+    width: 50%;
+    height: 10vh;
+    position: relative;
+}
+.text1{
+    position: absolute;
+    bottom: -15vh;
+    left: 17%;
+    color: white;
+    font-family: 'Texturina', serif;
+    font-size:50px;
+}
+.para{
+    position: absolute;
+    bottom: -35vh;
+    left: 17%;
+    padding-right: 35px;
+    color: white;
+    font-family: 'Texturina', serif
+}
+
 @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
@@ -272,39 +307,50 @@ padding: 10px 15px;
     <span class="dot"></span> 
     <span class="dot"></span> 
 </div>
- <h1 style="font-family: 'Carter One', cursive;font-size: 50px; text-align: center">WHY JOIN US</h1>
+ <h1 style="font-family: 'Texturina', serif;font-size: 50px; text-align: center;margin-bottom: 25px;">WHY JOIN US?</h1>
 <div class="moto">
     <div class="box">
         <div class="round">
             <i class="fa fa-pagelines" aria-hidden="true"></i>
         </div>
-            <br><h3 style="color: rgb(20, 131, 79);font-family: 'Texturina', serif;text-align: center;">Grow the Green Bed.</h3>
+            <br><h2 style="color: rgb(20, 131, 79);font-family: 'Texturina', serif;text-align: center;">Grow the Green Bed.</h2><br>
             <p>Understand the importance of plants with us and spread greenery.</p>
     </div>
     <div class="box">
         <div class="round">
             <i class="fas fa-paw"></i>
         </div>
-        <br><h3 style="color: rgb(20, 131, 79);font-family: 'Texturina', serif; text-align: center;">Be Friends with Animals</h3>
+        <br><h2 style="color: rgb(20, 131, 79);font-family: 'Texturina', serif; text-align: center;">Be Friends with Animals</h2><br>
             <p>If having a soul means being able to feel love and loyalty and gratitude, then animals are better off than a lot of humans.</p>
     </div>
     <div class="box">
         <div class="round">
             <i class="fas fa-spa"></i>
         </div>
-            <br><h3 style="color: rgb(20, 131, 79);font-family: 'Texturina', serif; text-align: center;">Feel the bliss of the nature</h3>
+            <br><h2 style="color: rgb(20, 131, 79);font-family: 'Texturina', serif; text-align: center;">Feel the bliss of the nature</h2><br>
             <p>Look deep into nature, and then you will understand everything better.</p>
     </div>
     <div class="box">
         <div class="round">
             <i class="fab fa-evernote"></i>
         </div>
-            <br><h3 style="color: rgb(20, 131, 79);font-family: 'Texturina', serif; text-align: center;">Save the majestic creatures</h3>
+            <br><h2 style="color: rgb(20, 131, 79);font-family: 'Texturina', serif; text-align: center;">Save the majestic creatures</h2><br>
             <p>If you truly love nature, you will find beauty everywhere.Let's take a tour together and realise its incredible beauty.</p>
     </div>
 </div>
 
-
+<div class="types">
+    <div class="f1">
+        <img src = "Images/forest.jpg" style="height: 65vh; width: 100%;">
+        <div class="text1">FLORA</div>
+        <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel totam aspernatur consequuntur ipsam dicta iure </div>
+    </div>
+    <div class="f2">
+        <img src = "Images/animal.jpg" style="height: 65vh; width: 100%;">
+        <div class="text1">FAUNA</div>
+        <div class="para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel totam aspernatur consequuntur ipsam dicta iure </div>
+    </div>
+</div>
 <script>
 var slideIndex = 0;
 showSlides();
