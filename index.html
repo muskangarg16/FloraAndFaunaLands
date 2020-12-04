@@ -223,6 +223,7 @@ padding: 10px 15px;
 }
 .types{
     width: 100%;
+    margin-bottom: 5vh;
 }
 .f1{
     float: left;
@@ -300,6 +301,29 @@ padding: 10px 15px;
     color: white;
 }
 
+#circle-container {
+        width: 100%;
+        
+        
+      }
+
+      #circle-container::after {
+        content: '';
+        display: block;
+        clear: both;
+      }
+
+      .circle img {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        background-color: goldenrod;
+        float: left;
+        margin-bottom: 20px;
+        margin-left: 7%;
+      }
+
+    
 @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
@@ -405,6 +429,21 @@ padding: 10px 15px;
     </div>
 </div>
 
+<h1 style="font-family: 'Texturina', serif;text-align: center;font-size: 50px;margin-bottom: 25px; margin-top: 10vh;">KEY SPECIES</h1>
+<div id="circle-container">
+    <div class="circle">
+      <img src="Images/noaa-em7gIbjEL0I-unsplash.jpg" alt="" />
+    </div>
+    <div class="circle">
+      <img src="Images/forest.jpg" alt="" />
+    </div>
+    <div class="circle">
+      <img src="Images/flora1.jpg" alt="" />
+    </div>
+    <div class="circle">
+      <img src="Images/flora.jpg" alt="" />
+    </div>
+  </div>
 <script>
 var slideIndex = 0;
 showSlides();
