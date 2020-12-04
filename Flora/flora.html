@@ -5,30 +5,200 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<style>@import url('https://fonts.googleapis.com/css2?family=Texturina:wght@900&display=swap');
+<style>
 
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Texturina:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+* {box-sizing: border-box;
+margin: 0;
+padding: 0;}
 .flora{
     position: relative;
     width: 100%;
-    height: 50vh;
+    height: 70vh;
 }
 .para1{
     position: absolute;
     color: white;
-    top: 0;
+    top: 50vh;
     left: 10vh;
+}
+.header{
+height: 10vh;
+width:100%;
+background-color: rgb(7, 7, 7);
+position: fixed;
+top: 0;
+left: 0;
+z-index: 100;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: white;
+    float: right;
+    padding: 12px 20px;
+    line-height: 7vh;
+}
+.header ul{
+    list-style-type: none;
+}
+.header h1 {
+    float: left;
+    color: brown;
+    line-height: 10vh;
+    font-family: 'Pacifico', cursive;
+
+}
+
+.header ul li a:hover{
+background-color: brown;
+color: black;
+padding: 10px 15px;
+}
+.cat{
+    background-image: linear-gradient(to right, black,rgb(20, 131, 79));
+    width: 100%;
+    height: 10vh;
+}
+
+
+
+.imageGrid {
+  line-height: 0;
+}
+.imageGrid .tile {
+  width:33.33%;
+  min-height:20em;
+  line-height: 1.2;
+  display:inline-block;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  
+  color:#fff;
+  font-family:"Verdana",sans-serif;
+  text-shadow: 2px 2px 2px #000;
+  cursor: pointer; 
+  cursor: hand;
+}
+
+.imageGrid .tile:before {
+  content: '';
+  background-color: rgba(15,15,15,0.5);
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+}
+
+.imageGrid .tile:hover:before {
+  display: none;
+}
+
+.imageGrid .tile .textWrapper {
+  text-align: center;
+  vertical-align: middle;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: .75em;
+}
+
+.imageGrid .tile .textWrapper .content {
+  display: none;
+}
+
+.imageGrid .tile:hover .textWrapper .content {
+  display: block;
+}
+
+.imageGrid .tile:hover .textWrapper .content h2 {
+  margin: 0;
+}
+
+@media (max-width: 1000px) {
+  .imageGrid .tile {
+    width: 50%;
+  }
+}
+ 
+@media (max-width: 700px) {
+  .imageGrid .tile {
+    width: 100%;
+  }
+  
 }
 </style>
 
 
 <body>
+
+<div class="header">
+    <h1>Flora <span style="color: gold;font-size:50px;font-family: 'Texturina', serif;">&</span> Fauna Lands</h1>
+        <ul>
+            <li><a href = "#">BECOME A CONTRIBUTOR</a></li>
+                <li><a href = "#">FAUNA</a></li>
+                <li><a href = "#">FLORA</a></li>
+                <li><a href = "#">ABOUT US</a></li>
+                <li><a href = "#">HOME</a></li>
+            </ul>
+    </div>
+
  <div class="flora">
-     <img src="../Images/forest.jpg" style="height: 50vh; width: 100%;">
+     <img src="../Images/forest.jpg" style="height: 70vh; width: 100%;">
      <div class="para1">
-         <h1 style="font-family: 'Texturina', serif;text-align: center;">FLORA</h1>
+         <h1 style="font-family: 'Texturina', serif;text-align: center;font-size: 60px;">FLORA</h1>
      </div>
  </div>
-
+ <h3 style="font-family: 'Texturina', serif;text-align: center;font-size: 20px; margin-top: 10vh;margin-bottom: 10vh;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius quos hic magnam vel autem, reprehenderit cumque obcaecati, officiis molestiae, nihil id esse fuga delectus voluptatem sit eligendi accusantium odit aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum optio architecto laborum quas, debitis ea ex. Dolorum cum soluta doloremque natus rem, quibusdam quae quaerat praesentium nesciunt, fuga odio modi?</h3>
+<div class="cat">
+ <h1 style="font-family: 'Texturina', serif;text-align: center;font-size: 60px;margin-top: 30px;">CATEGORIES</h1>
+ </div>
+ <div class="imageGrid">
+    <div class="tile" style="background-image: url('https://bit.ly/1tSEfja');">
+      <div class="textWrapper"><h2>Pont de Bir-Hakeim, Paris</h2>
+        <div class="content">The western part of the Pont de Bir-Hakeim seen at night. Buildings of the 16th arrondissement of Paris are visible in the background.</div>
+      </div>
+    </div><!--
+  --><div class="tile" style="background-image: url('https://bit.ly/1rXAWHn');">
+    <div class="textWrapper"><h2>Wiesen Viaduct, Switzerland</h2>
+      <div class="content">A RhB Ge 4/4 II with a push–pull train crosses the Wiesen Viaduct between Wiesen and Filisur, Switzerland.</div>
+    </div>
+    </div><!--
+  --><div class="tile" style="background-image: url('https://bit.ly/1k3JsEi');">
+    <div class="textWrapper"><h2>Office building, Germany</h2>
+      <div class="content">Office building of the LVM Insurance in Munster (Westphalia), Germany.</div>
+    </div>
+    </div><!--
+  --><div class="tile" style="background-image: url('https://bit.ly/Ux98xe');">
+    <div class="textWrapper"><h2>Maya Beach, Thailand</h2>
+      <div class="content">Long-tail boats in Maya Beach, Ko Phi Phi Lee, Thailand.</div>
+    </div>
+    </div><!--
+  --><div class="tile" style="background-image: url('https://bit.ly/1nR24qx');">
+    <div class="textWrapper"><h2>Chi Minh City, Vietnam.</h2>
+      <div class="content">Night view of Ho Chi Minh City from Bitexco Financial Tower, Vietnam.</div>
+    </div>
+    </div><!--
+  --><div class="tile" style="background-image: url('https://bit.ly/1oAM0tK');">
+    <div class="textWrapper"><h2>Porto City Hall, Portugal</h2>
+      <div class="content"></div>
+    </div>
+    </div>
+    
+    
+    
+  </div>
 
 </body>
 </html>
