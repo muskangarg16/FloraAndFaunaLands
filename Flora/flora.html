@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/f876073d22.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
 <style>
 
 @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@800&display=swap');
@@ -70,9 +74,10 @@ padding: 10px 15px;
 
 .imageGrid {
   line-height: 0;
+  background-image: linear-gradient(to right, black,rgb(20, 131, 79));
 }
 .imageGrid .tile {
-  width:33.33%;
+  width:33.05%;
   min-height:20em;
   line-height: 1.2;
   display:inline-block;
@@ -81,12 +86,13 @@ padding: 10px 15px;
   background-repeat: no-repeat;
   overflow: hidden;
   position: relative;
-  
+ 
   color:#fff;
   font-family:"Verdana",sans-serif;
   text-shadow: 2px 2px 2px #000;
   cursor: pointer; 
   cursor: hand;
+  
 }
 
 .imageGrid .tile:before {
@@ -125,6 +131,100 @@ padding: 10px 15px;
 .imageGrid .tile:hover .textWrapper .content h2 {
   margin: 0;
 }
+.copyright-area{
+  background: black;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #ff5e14;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #ff5e14;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}
+body{
+  font-family: 'Lato', sans-serif;
+}
+
+.wrapper{
+  border: 5px solid red;
+  position: relative;
+  bottom: 50%;
+  transform: translate(-50%, -50%);
+  float: right;
+  height: 65px;
+  width: 300px;
+
+}
+
+.link_wrapper{
+  position: absolute;
+  bottom: 15%;
+  right: 10%;
+}
+
+.link_wrapper a{
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #333;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all .35s;
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all .35s;
+}
+
+.icon svg{
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-135deg);
+  fill: #2ecc71;
+  transition: all .35s;
+}
+
+.link_wrapper a:hover{
+  width: 200px;
+  border: 3px solid #2ecc71;
+  background: transparent;
+  color: #2ecc71;
+}
+
+.link_wrapper a:hover + .icon{
+  border: 3px solid #2ecc71;
+  right: -25%;
+}
+
 
 @media (max-width: 1000px) {
   .imageGrid .tile {
@@ -191,6 +291,41 @@ padding: 10px 15px;
     </div>
     </div>  
   </div>
+<img src="../Images/logo.png">
+    <div class="wrapper">
+      <div class="link_wrapper">
+        <a href="#">Hover Me!</a>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+            <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+          </svg>
+        </div>
+    </div>
+  </div>
+</div>
+
+<div class="copyright-area">
+  <div class="container">
+    <div class="row">
+        <div class="col-xl-6 col-lg-6 text-center text-lg-left">
+            <div class="copyright-text">
+               <p>Copyright &copy; 2020, All Right Reserved </p>
+              </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+          <div class="footer-menu">
+              <ul>
+                <li><a href="#">Home</a></li>
+                  <li><a href="#">Terms</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Policy</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
