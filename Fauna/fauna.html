@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+<script src="https://kit.fontawesome.com/f876073d22.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Texturina:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Carter+One&display=swap');
+
+* {box-sizing: border-box;
+margin: 0;
+padding: 0;}
+.flora{
+    position: relative;
+    width: 100%;
+    height: 70vh;
+}
+.para1{
+    position: absolute;
+    color: white;
+    top: 50vh;
+    left: 10vh;
+}
+.header{
+height: 10vh;
+width:100%;
+background-color: rgb(7, 7, 7);
+position: fixed;
+top: 0;
+left: 0;
+z-index: 100;
+}
+
+.header ul li a {
+    text-decoration: none;
+    color: white;
+    float: right;
+    padding: 12px 20px;
+    line-height: 7vh;
+}
+.header ul{
+    list-style-type: none;
+}
+.header h1 {
+    float: left;
+    color: brown;
+    line-height: 10vh;
+    font-family: 'Pacifico', cursive;
+
+}
+
+.header ul li a:hover{
+background-color: brown;
+color: black;
+padding: 10px 15px;
+}
+.cat{
+    background-image: linear-gradient(to right, black,rgb(20, 131, 79));
+    width: 100%;
+    height: 15vh;
+}
+
+
+
+.imageGrid {
+  line-height: 0;
+  background-image: linear-gradient(to right, black,rgb(20, 131, 79));
+  margin-bottom: 30px;
+}
+.imageGrid .tile {
+  width:33.05%;
+  min-height:20em;
+  line-height: 1.2;
+  display:inline-block;
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+ 
+  color:#fff;
+  font-family:"Verdana",sans-serif;
+  text-shadow: 2px 2px 2px #000;
+  cursor: pointer; 
+  cursor: hand;
+  
+}
+
+.imageGrid .tile:before {
+  content: '';
+  background-color: rgba(15,15,15,0.5);
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  position: absolute;
+}
+
+.imageGrid .tile:hover:before {
+  display: none;
+}
+
+.imageGrid .tile .textWrapper {
+  text-align: center;
+  vertical-align: middle;
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: .75em;
+}
+.copyright-area{
+  background: black;
+  padding: 25px 0;
+}
+.copyright-text p {
+  margin: 0;
+  font-size: 14px;
+  color: #878787;
+}
+.copyright-text p a{
+  color: #ff5e14;
+}
+.footer-menu li {
+  display: inline-block;
+  margin-left: 20px;
+}
+.footer-menu li:hover a{
+  color: #ff5e14;
+}
+.footer-menu li a {
+  font-size: 14px;
+  color: #878787;
+}
+body{
+  font-family: 'Lato', sans-serif;
+}
+.ab
+{    width: 100%;
+    height: 130px;
+}
+.logo{
+    width: 50%;
+    float: left;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+}
+.wrapper{
+  height: 130px;
+  width: 50%;
+  margin:auto;
+position: relative;
+
+}
+
+.link_wrapper{
+position: absolute;
+bottom: 30%;
+right:40%;
+}
+
+.link_wrapper a{
+  display: block;
+  width: 250px;
+  height: 50px;
+  line-height: 50px;
+  font-weight: bold;
+  text-decoration: none;
+  background: #333;
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: 3px solid #333;
+  transition: all .35s;
+}
+
+.icon{
+  width: 50px;
+  height: 50px;
+  border: 3px solid transparent;
+  position: absolute;
+  transform: rotate(45deg);
+  right: 0;
+  top: 0;
+  z-index: -1;
+  transition: all .35s;
+}
+
+.icon svg{
+  width: 30px;
+  position: absolute;
+  top: calc(50% - 15px);
+  left: calc(50% - 15px);
+  transform: rotate(-135deg);
+  fill: #2ecc71;
+  transition: all .35s;
+}
+
+.link_wrapper a:hover{
+  width: 200px;
+  border: 3px solid #2ecc71;
+  background: transparent;
+  color: #2ecc71;
+}
+
+.link_wrapper a:hover + .icon{
+  border: 3px solid #2ecc71;
+  right: -25%;
+}
+
+/* Font */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700');
+
+/* Design */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+
+.main{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+.cards img {
+  height: 40vh;
+  width: 100%;
+  vertical-align: middle;
+}
+
+.btn {
+  color: #ffffff;
+  padding: 0.8rem;
+  font-size: 14px;
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-weight: 400;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+  border: 3px solid gray;
+  background: transparent;
+}
+
+.btn:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+}
+
+.heading{
+  text-align: center;
+  font-weight: bold;
+  font-family: 'Texturina';
+  margin-top: 80px;
+}
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.cards_item {
+  display: flex;
+  padding: 1rem;
+}
+.img-hover-zoom {
+ /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .5s ease;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.5);
+}
+
+.img-hover-zoom--zoom-n-rotate img {
+  transition: transform 1.5s ease-in-out;
+}
+
+/* The Transformation */
+.img-hover-zoom--zoom-n-rotate:hover img {
+  transform: scale(2) rotate(25deg);
+}
+@media (min-width: 40rem) {
+  .cards_item {
+    width: 50%;
+  }
+}
+
+@media (min-width: 56rem) {
+  .cards_item {
+    width: 33.3333%;
+  }
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.card_content {
+  padding: 1rem;
+  background: linear-gradient(to right,black, rgb(20, 131, 79));
+}
+
+.card_title {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+  margin: 0px;
+}
+
+.card_text {
+  color: #ffffff;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;    
+  font-weight: 400;
+}
+.made_by{
+  font-weight: 400;
+  font-size: 13px;
+  margin-top: 35px;
+  text-align: center;
+}
+@media (max-width: 1000px) {
+  .imageGrid .tile {
+    width: 50%;
+  }
+  .logo{
+      display: none;
+  }
+  .wrapper{
+      width: 50%;
+    margin: auto;
+  }
+}
+ 
+@media (max-width: 700px) {
+  .imageGrid .tile {
+    width: 100%;
+  }
+  
+}
+</style>
+<body>
+<div class="header">
+    <h1>Flora <span style="color: gold;font-size:50px;font-family: 'Texturina', serif;">&</span> Fauna Lands</h1>
+        <ul>
+            <li><a href = "#">BECOME A CONTRIBUTOR</a></li>
+                <li><a href = "#">FAUNA</a></li>
+                <li><a href = "#">FLORA</a></li>
+                <li><a href = "#">ABOUT US</a></li>
+                <li><a href = "#">HOME</a></li>
+            </ul>
+    </div>
+<div class="flora">
+     <img src="../Images/fauna1.jpg" style="height: 70vh; width: 100%;">
+     <div class="para1">
+         <h1 style="font-family: 'Texturina', serif;text-align: center;font-size: 60px;">FLORA</h1>
+     </div>
+ </div>
+ <h3 style="font-family: 'Texturina', serif;text-align: center;font-size: 20px; margin-top: 10vh;margin-bottom: 10vh;">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius quos hic magnam vel autem, reprehenderit cumque obcaecati, officiis molestiae, nihil id esse fuga delectus voluptatem sit eligendi accusantium odit aut. Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum optio architecto laborum quas, debitis ea ex. Dolorum cum soluta doloremque natus rem, quibusdam quae quaerat praesentium nesciunt, fuga odio modi?</h3>
+<div class="cat">
+ <h1 style="font-family: 'Texturina', serif;text-align: center;font-size: 60px;margin-top: 30px; color:white;line-height: 13vh;">CATEGORIES</h1>
+ </div>
+
+ <div class="imageGrid">
+    <div class="tile" style="background-image: url(../Images/);">
+      <div class="textWrapper"><h2>MAMMALS</h2> 
+      </div>
+    </div>
+ <div class="tile" style="background-image: url(../Images/gymnosperms.jpg);">
+    <div class="textWrapper"><h2>GYMNOSPERMS</h2> 
+    </div>
+    </div>
+ <div class="tile" style="background-image: url(../Images/pteridophytes.jpg);">
+    <div class="textWrapper"><h2> PTERIDOPHYTES </h2>
+    </div>
+    </div>
+ <div class="tile" style="background-image: url(../Images/bryophytes.jpg);">
+    <div class="textWrapper"><h2>BRYOPHYTES</h2> 
+    </div>
+    </div>
+  <div class="tile" style="background-image: url(../Images/algae.jpg);">
+    <div class="textWrapper"><h2>ALGAE</h2>  
+    </div>
+    </div>
+ <div class="tile" style="background-image: url(../Images/fungi.jpg);">
+    <div class="textWrapper"><h2>FUNGI</h2>
+    </div>
+    </div>  
+  </div>
+  <h2 class="heading">ANGIOSPERMS</h2>
+  <div class="main">
+    <ul class="cards">
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image img-hover-zoom img-hover-zoom--zoom-n-rotate"><img src="../Images/Gold-of-Kinablu-Orchid.jpeg"></div>
+          <div class="card_content">
+            <h2 class="card_title">KINABALU ORCHID</h2>
+            <p class="card_text">A large sized clear-leafed species of orchid blooms with a tall inflorenscence.
+            </p>
+            <button class="btn card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image img-hover-zoom img-hover-zoom--zoom-n-rotate"><img src="../Images/Hydrangea-1024x764.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">HYDRANGEA</h2>
+            <p class="card_text">A genus of 70–75 species of flowering plants native to Asia and the Americas
+            </p>
+            <button class="btn card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image img-hover-zoom img-hover-zoom--zoom-n-rotate"><img src="../Images/Chocolate-Cosmos-1024x682.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">CHOCOLATE COSMOS</h2>
+            <p class="card_text">Species of Cosmos, native to Mexico and quite abundant there. 
+            </p>
+            <button class="btn card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      </ul>
+  </div>
+<h2 class="heading">GYMNOSPERMS</h2>
+<div class="main">
+  <ul class="cards">
+    <li class="cards_item">
+      <div class="card">
+        <div class="card_image img-hover-zoom img-hover-zoom--zoom-n-rotate"><img src="../Images/ginko.jpg"></div>
+        <div class="card_content">
+          <h2 class="card_title">GINKGO</h2>
+          <p class="card_text">The only living species in the division Ginkgophyta, all others being extinct.
+          </p>
+          <button class="btn card_btn">Read More</button>
+        </div>
+      </div>
+    </li>
+    <li class="cards_item">
+      <div class="card">
+        <div class="card_image img-hover-zoom img-hover-zoom--zoom-n-rotate"><img src="../Images/gnetum.jpg"></div>
+        <div class="card_content">
+          <h2 class="card_title">GNETUM</h2>
+          <p class="card_text">A genus of 70–75 species of flowering plants native to Asia and the Americas
+          </p>
+          <button class="btn card_btn">Read More</button>
+        </div>
+      </div>
+    </li>
+    <li class="cards_item">
+      <div class="card">
+        <div class="card_image img-hover-zoom img-hover-zoom--zoom-n-rotate"><img src="../Images/welwet.jpg"></div>
+        <div class="card_content">
+          <h2 class="card_title">WELWITSCHIA</h2>
+          <p class="card_text">A genus of 70–75 species of flowering plants native to Asia and the Americas 
+          </p>
+          <button class="btn card_btn">Read More</button>
+        </div>
+      </div>
+    </li>
+    </ul>
+</div>
+<h2 class="heading">PTERIDOPHYTES</h2>
+  <div class="main">
+    <ul class="cards">
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image img-hover-zoom img-hover-zoom--zoom-n-rotate"><img src="../Images/psilotum.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">PSILOTUM</h2>
+            <p class="card_text">A genus of 70–75 species of flowering plants native to Asia and the Americas
+            </p>
+            <button class="btn card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image img-hover-zoom img-hover-zoom--zoom-n-rotate"><img src="../Images/pteris.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">PTERIS</h2>
+            <p class="card_text">A genus of 70–75 species of flowering plants native to Asia and the Americas
+            </p>
+            <button class="btn card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image img-hover-zoom img-hover-zoom--zoom-n-rotate"><img src="../Images/Selaginella_involens_katahiba02.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">SELAGINELLA</h2>
+            <p class="card_text">Species of Cosmos, native to Mexico and quite abundant there. 
+            </p>
+            <button class="btn card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      </ul>
+  </div>
+  <h2 class="heading">BRYOPHYTES</h2>
+  <div class="main">
+    <ul class="cards">
+      
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image img-hover-zoom img-hover-zoom--zoom-n-rotate"><img src="../Images/mosses.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">MOSSES</h2>
+            <p class="card_text">A genus of 70–75 species of flowering plants native to Asia and the Americas
+            </p>
+            <button class="btn card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image img-hover-zoom img-hover-zoom--zoom-n-rotate"><img src="../Images/Liverworts.png"></div>
+          <div class="card_content">
+            <h2 class="card_title">LIVERWORTS</h2>
+            <p class="card_text">A large sized clear-leafed species of orchid blooms with a tall inflorenscence.
+            </p>
+            <button class="btn card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image img-hover-zoom img-hover-zoom--zoom-n-rotate"><img src="../Images/featured_image_-_hornwort.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">HORNWORT</h2>
+            <p class="card_text">Species of Cosmos, native to Mexico and quite abundant there. 
+            </p>
+            <button class="btn card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      </ul>
+  </div>
+  <h2 class="heading">ALGAE</h2>
+  <div class="main">
+    <ul class="cards">
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image img-hover-zoom img-hover-zoom--zoom-n-rotate"><img src="../Images/rhodophyte(red algae).jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">RHODOPHYTE</h2>
+            <p class="card_text">A large sized clear-leafed species of orchid blooms with a tall inflorenscence.
+            </p>
+            <button class="btn card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image img-hover-zoom img-hover-zoom--zoom-n-rotate"><img src="../Images/ulva lactica(green algae).jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">ULVA LATICA</h2>
+            <p class="card_text">A genus of 70–75 species of flowering plants native to Asia and the Americas
+            </p>
+            <button class="btn card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image img-hover-zoom img-hover-zoom--zoom-n-rotate"><img src="../Images/phaeophyta(brown algae).jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">PHAEOPHYTA</h2>
+            <p class="card_text">Species of Cosmos, native to Mexico and quite abundant there. 
+            </p>
+            <button class="btn card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      </ul>
+  </div>
+  <h2 class="heading">FUNGI</h2>
+  <div class="main">
+    <ul class="cards">
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image img-hover-zoom img-hover-zoom--zoom-n-rotate"><img src="../Images/Hexagonia_caperata.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">AUSTROBOLETUS</h2>
+            <p class="card_text">A large sized clear-leafed species of orchid blooms with a tall inflorenscence.
+            </p>
+            <button class="btn card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image img-hover-zoom img-hover-zoom--zoom-n-rotate"><img src="../Images/Fungi_Quiz_Eureka_Blog.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">AMANITA</h2>
+            <p class="card_text">A genus of 70–75 species of flowering plants native to Asia and the Americas
+            </p>
+            <button class="btn card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      <li class="cards_item">
+        <div class="card">
+          <div class="card_image img-hover-zoom img-hover-zoom--zoom-n-rotate"><img src="../Images/image-of-two-mushrooms.jpg.optimal.jpg"></div>
+          <div class="card_content">
+            <h2 class="card_title">AGARICUS</h2>
+            <p class="card_text">Species of Cosmos, native to Mexico and quite abundant there. 
+            </p>
+            <button class="btn card_btn">Read More</button>
+          </div>
+        </div>
+      </li>
+      </ul>
+  </div>
+<div class="ab">
+       <div class="logo">
+        <img src="../Images/logo.png">
+        </div>
+    <div class="wrapper">
+      <div class="link_wrapper">
+        <a href="#">GO TO TOP!</a>
+        <div class="icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 268.832 268.832">
+            <path d="M265.17 125.577l-80-80c-4.88-4.88-12.796-4.88-17.677 0-4.882 4.882-4.882 12.796 0 17.678l58.66 58.66H12.5c-6.903 0-12.5 5.598-12.5 12.5 0 6.903 5.597 12.5 12.5 12.5h213.654l-58.66 58.662c-4.88 4.882-4.88 12.796 0 17.678 2.44 2.44 5.64 3.66 8.84 3.66s6.398-1.22 8.84-3.66l79.997-80c4.883-4.882 4.883-12.796 0-17.678z"/>
+          </svg>
+        </div>
+    </div>
+  </div>
+</div>
+<div class="copyright-area">
+  <div class="container">
+    <div class="row">
+        <div class="col-xl-6 col-lg-6 text-center text-xl-left">
+            <div class="copyright-text">
+               <p>Copyright &copy; 2020, All Right Reserved </p>
+              </div>
+        </div>
+        <div class="col-xl-6 col-lg-6 d-none d-lg-block text-right">
+          <div class="footer-menu">
+              <ul>
+                <li><a href="#">Home</a></li>
+                  <li><a href="#">Terms</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Policy</a></li>
+                  <li><a href="#">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
