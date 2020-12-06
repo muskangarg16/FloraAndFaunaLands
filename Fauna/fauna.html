@@ -10,7 +10,10 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 <style>
-
+html{
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px;
+}
 @import url('https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pirata+One&display=swap');
@@ -270,6 +273,8 @@ right:40%;
   font-weight: bold;
   font-family: 'Texturina';
   margin-top: 80px;
+  
+
 }
 .cards {
   display: flex;
@@ -305,6 +310,15 @@ right:40%;
 /* The Transformation */
 .img-hover-zoom--zoom-n-rotate:hover img {
   transform: scale(2) rotate(25deg);
+}
+.imageGrid a{
+    color: white;
+    text-decoration: none;
+}
+.imageGrid a:hover{
+    color:darkred;
+    font-weight: bold;
+    font-size: 30px;
 }
 @media (min-width: 40rem) {
   .cards_item {
