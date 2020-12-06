@@ -221,7 +221,39 @@ right:40%;
   border: 3px solid #2ecc71;
   right: -25%;
 }
+.img-hover-zoom {
+   /* [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
 
+}
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .5s ease;
+  height: 40vh;
+  width: 100%;
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.5);
+}
+.block{
+  width:100%;
+  height: 45vh;
+  
+}
+.species{
+  height: 45vh;
+  width: 30%;
+  float: left;
+  padding: 100px 20px;
+  margin-left: 37px;
+
+}
+.content{
+  height: 15vh;
+}
 
 @media (max-width: 1000px) {
   .imageGrid .tile {
@@ -296,6 +328,32 @@ right:40%;
     </div>
     </div>  
   </div>
+<div class="block">
+<div class="species">
+  <div class="img-hover-zoom">
+    <img src="../Images/kinabalu.jpg" alt="This zooms-in really well and smooth">
+  </div>
+  <div class="content">
+    <h2>KINABALU ORCHID</h2>
+  </div>
+</div>
+<div class="species">
+  <div class="img-hover-zoom">
+    <img src="../Images/Hydrangea-1024x764.jpg" alt="This zooms-in really well and smooth">
+  </div>
+  <div class="content">
+    <h3>HYDRANGEA</h3>
+  </div>
+</div>
+<div class="species">
+  <div class="img-hover-zoom">
+    <img src="../Images/Chocolate-Cosmos-1024x682.jpg" alt="This zooms-in really well and smooth">
+  </div>
+  <div class="content">
+    <h3>CHOCOLATE COSMOS</h3>
+  </div>
+</div>
+</div>    
 <div class="ab">
        <div class="logo">
         <img src="../Images/logo.png" >
