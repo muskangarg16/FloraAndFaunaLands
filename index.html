@@ -19,6 +19,7 @@
 * {box-sizing: border-box;
 margin: 0;
 padding: 0;}
+
 html{
   scroll-behavior: smooth;
   scroll-padding-top: 50px;
@@ -512,9 +513,16 @@ padding: 10px 15px;
 
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .text {font-size: 11px}
+@media only screen and (max-width: 480px) {
+  .text {
+    font-size: 11px;
+    }
+  .header ul li a{
+    display: none;
+    }
 }
+
+
 </style>
 </head>
 <body>
