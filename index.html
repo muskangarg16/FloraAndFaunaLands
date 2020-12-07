@@ -518,7 +518,7 @@ padding: 10px 15px;
 
 
 /* On smaller screens, decrease text size */
-@media only screen and (max-width: 480px) {
+@media only screen and (max-width: 625px) {
   .text {
     font-size: 30px;
     }
@@ -548,8 +548,77 @@ padding: 10px 15px;
     margin-left: 40px
   }
 }
+@media(max-width: 800px)  {
+  .header ul li a{
+  display: none;
+}
+.glow-on-hover{
+    position: absolute;
+    top: 60vh;
+    left:35vh;
+  }
+  .header h1{
+    font-size: 40px;
+  }
+  .middle{
+    left: 43%;
+  }
+  .circle{
+    margin-left: 40px
+  }
+  .box{
+    float: none;
+    width: 60%;
+    margin:auto
+  }
+  .f1,.f2{
+    float: none;
+    width: 100%;
+  }
+  .text{
+    font-size: 60px;
+  }
+}
 
+@media (min-width: 801px) and (max-width: 1199px) {
+  .text{
+    font-size: 60px;
+  }
+  .header ul li a{
+    display: none;
+    }
+  .glow-on-hover{
+    position: absolute;
+    top: 60vh;
+    left:60vh;
+  }
+  .box{
+    float: none;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .f1,.f2{
+    float: none;
+    width: 100%;
+  }
+  .header h1{
+    font-size: 50px;
+  }
+  .middle{
+    left: 28%;
+  }
+    .circle img {
+        height: 250px;
+        width: 250px;
+        border-radius: 50%;
+        background-color: goldenrod;
+        float: left;
+        margin-left: 15%;
+        margin-bottom: 20px;
 
+  }
+}
 </style>
 </head>
 <body>
