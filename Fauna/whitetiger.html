@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .para1{
+    position: absolute;
+    top: 5vh;
+    left: 10vh;
+    color: white;
+  }
+  .content{
+background-color: black;    height: 67vh;
+    width: 50%;
+   
+    padding: 30px 20px;
+    border-radius: 20px;
+    margin-top: 15px;
+    float: left;
+    border: 8px solid rgb(236, 96, 96);
+  }
+  .content p{
+    color: white;
+    font-size: 25px;
+  }
+  .content h5{
+    color: red;
+    font-size: 30px;
+    text-align: center;
+  }
+  :root {
+  --radius: 5px;
+}
+.cat{
+    width: 50%;
+    float: right;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(6rem, 1fr));
+  grid-auto-rows: 6rem;
+  grid-auto-flow: dense;
+  grid-gap: 0.5rem;
+  margin: 1rem;
+}
+
+ .container img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+ .di {
+  overflow: hidden;
+  border-radius: var(--radius);
+}
+
+
+.di:nth-child(n + 1) {
+  grid-row: span 2;
+}
+
+.di:nth-child(n + 2) {
+  grid-column: span 3;
+}
+
+
+.di:nth-child(n + 4) {
+  grid-row: span 2;
+  grid-column: span 2;
+}
+.para1 {
+  padding: 40px;
+  font-size: 75px;
+  font-family: 'Monoton', cursive;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 80px red,0 0 30px FireBrick,0 0 6px DarkRed;
+  color: red;
+}
+.para1 p { margin:0; }
+#error:hover { text-shadow: 0 0 200px #ffffff,0 0 80px #008000,0 0 6px #0000ff; }
+#code:hover { text-shadow: 0 0 100px red,0 0 40px FireBrick,0 0 8px DarkRed; }
+#error {
+  color: #fff;
+  text-shadow: 0 0 80px #ffffff,0 0 30px #008000,0 0 6px #0000ff;
+}
+#error span {
+  animation: upper 11s linear infinite;
+}
+#code span:nth-of-type(2) {
+  animation: lower 10s linear infinite;
+}
+#code span:nth-of-type(1) {
+  text-shadow: none;
+  opacity:.4;
+}
+@keyframes upper {
+  0%,19.999%,22%,62.999%,64%, 64.999%,70%,100% {
+    opacity:.99; text-shadow: 0 0 80px #ffffff,0 0 30px #008000,0 0 6px #0000ff;
+  }
+  20%,21.999%,63%,63.999%,65%,69.999% {
+    opacity:0.4; text-shadow: none; 
+  }
+}
+@keyframes lower {
+  0%,12%,18.999%,23%,31.999%,37%,44.999%,46%,49.999%,51%,58.999%,61%,68.999%,71%,85.999%,96%,100% {
+    opacity:0.99; text-shadow: 0 0 80px red,0 0 30px FireBrick,0 0 6px DarkRed;
+  }
+  19%,22.99%,32%,36.999%,45%,45.999%,50%,50.99%,59%,60.999%,69%,70.999%,86%,95.999% { 
+    opacity:0.4; text-shadow: none; 
+  }
+}
+.fact{
+  position: relative;
+  margin-left: 40%;
+}
+.flip-container {
+  -webkit-perspective: 1000;
+  -moz-perspective: 1000;
+  -o-perspective: 1000;
+  perspective: 1000;
+
+	border: 1px solid #ccc;
+  position: absolute;
+  top: 76vh;
+
+}
+
+	.flip-container:hover .flipper,  
+  .flip-container.hover .flipper {
+		-webkit-transform: rotateY(180deg);
+		-moz-transform: rotateY(180deg);
+    -o-transform: rotateY(180deg);
+		transform: rotateY(180deg);
+	}
+
+.flip-container, .front, .back {
+	width: 320px;
+	height: 427px;
+}
+
+.flipper {
+	-webkit-transition: 0.6s;
+	-webkit-transform-style: preserve-3d;
+
+	-moz-transition: 0.6s;
+	-moz-transform-style: preserve-3d;
+  
+  -o-transition: 0.6s;
+	-o-transform-style: preserve-3d;
+
+	transition: 0.6s;
+	transform-style: preserve-3d;
+
+	position: relative;
+}
+
+.front, .back {
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+  -o-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.front {
+	background: url(Images/down.jpg) 0 0 no-repeat;
+	z-index: 2;
+  background-image: linear-gradient(to right, rgb(236, 96, 96),black);
+}
+
+.back {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+  -o-transform: rotateY(180deg);
+	transform: rotateY(180deg);
+
+	background: #f8f8f8;
+}
+
+.front .name {
+	font-size: 2em;
+	display: inline-block;
+	background: rgb(236, 96, 96);
+	color: #f8f8f8;
+	font-family: Courier;
+	padding: 5px 10px;
+	border-radius: 5px;
+	bottom: 60px;
+	left: 25%;
+	position: absolute;
+	text-shadow: 0.1em 0.1em 0.05em #333;
+
+	-webkit-transform: rotate(-20deg);
+	-moz-transform: rotate(-20deg);
+  -o-transform: rotate(-20deg);
+	transform: rotate(-20deg);
+}
+
+.back-logo {
+	position: absolute;
+	top: 40px;
+	left: 90px;
+	width: 160px;
+	height: 117px;
+	background: url(Images/w3.jpg) 0 0 no-repeat;
+}
+
+.back-title {
+	font-weight: bold;
+	color: #00304a;
+	position: absolute;
+	top: 180px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	text-shadow: 0.1em 0.1em 0.05em #acd7e5;
+	font-family: Courier;
+	font-size: 2em;
+}
+
+.back p {
+	position: absolute;
+	bottom: 40px;
+	left: 0;
+	right: 0;
+	text-align: center;
+	padding: 0 20px;
+  font-family: arial;
+  line-height: 2em;
+}
+
+#myVideo {
+width: 100%;
+height: 60vh;
+float: left;
+}
+
+#myBtn {
+  width: 200px;
+  font-size: 18px;
+  padding: 10px;
+  border: none;
+  background: #000;
+  color: #fff;
+  cursor: pointer;
+}
+
+#myBtn:hover {
+  background: #ddd;
+  color: black;
+}
+
+</style>
+<body>
+  <div class="tiger">
+    <img src="../Images/White Tiger Wallpapers.jpg" style="height: 90vh; width: 100%;">
+    <div class="para1">
+      <p id="error">WH<span>IT</span>E</p>
+      <p id="code">TI<span>G</span><span>ER</span></p>
+    </div>
+  </div>
+    <div class="content">
+      <h5>THEIR LIFESTYLE</h5>
+      <p>Lifespan: Tiger: 10 – 15 years<br>
+Speed: 49 – 65 km/h<br>
+Mass:  90 – 310 kg<br>
+Height: 70 – 120 cm<br>
+Length:  2.5 – 3.9 m<br>
+Gestation period:  93 – 112 days<br>
+   </p>
+   </div>
+   <div class="cat">
+    <div class="container">
+    <div class="di"><img src="../Images/w1.jpg"></div>
+    <div class="di"><img src="../Images/w2.jpg"></div>
+    <div class="di" ><img src="../Images/w3.jpg"></div>
+  </div>
+    </div>
+    <div class="overall">
+    <div class="fact">
+    <div class="flip-container" ontouchstart="this.classList.toggle('hover');">
+      <div class="flipper">
+        <div class="front">
+          <span class="name">HOVER TO SEE ME</span>
+        </div>
+        <div class="back">
+          <div class="back-logo"></div>
+          <div class="back-title">@bengaltiger</div>
+          <p>Bengal Tiger stripes are unique to each individual and act just like human fingerprints do.
+            .</p>
+        </div>
+      </div>
+    </div>
+    </div>
+   </div>
+   
+</body>
+</html>
