@@ -36,7 +36,7 @@ vertical-align: middle;}
 .slideshow-container {
   max-width: 1530px;
   position: relative;
-  margin: 0;
+ 
 }
 
 /* Caption text */
@@ -229,23 +229,20 @@ padding: 10px 15px;
 }
 .box p{
     text-align: justify;
-    font-size: 10px;
+    font-size: 15px;
 }
 
 .types{
     width: 100%;
-    height: 67vh;
 }
 .f1{
     float: left;
     width: 50%;
-    height: 65vh;
     position: relative;
 }
 .f2{
     float: right;
     width: 50%;
-    height: 65vh;
     position: relative;
 }
 
@@ -315,7 +312,6 @@ padding: 10px 15px;
 #circle-container {
         width: 100%;
         margin-top: 5vh;
-        height: 40vh;
         
       }
 
@@ -326,12 +322,12 @@ padding: 10px 15px;
       }
 
       .circle img {
-        height: 250px;
-        width: 250px;
+        height: 200px;
+        width: 200px;
         border-radius: 50%;
         background-color: goldenrod;
         float: left;
-        margin-bottom: 20px;
+        margin-bottom: 40px;
         margin-left: 7%;
       }
 
@@ -505,7 +501,15 @@ padding: 10px 15px;
   color: #878787;
 }
 
-
+.key{
+  padding-top: 40px;
+}
+.key h1{
+  font-size: 50px;
+  font-family: 'Texturina';
+  text-align: center;
+  margin-bottom: 70px;
+}
 @keyframes glowing {
     0% { background-position: 0 0; }
     50% { background-position: 400% 0; }
@@ -530,7 +534,19 @@ padding: 10px 15px;
     float: none;
     width: 100%;
   }
-  
+  .f1,.f2{
+    float: none;
+    width: 100%;
+  }
+  .header h1{
+    font-size: 30px;
+  }
+  .middle{
+    left: 43%;
+  }
+  .circle{
+    margin-left: 40px
+  }
 }
 
 
@@ -608,7 +624,6 @@ padding: 10px 15px;
             <p>If you truly love nature, you will find beauty everywhere.Let's take a tour together and realise its incredible beauty.</p>
     </div>
 </div>
-
 <div class="types" id="f11">
     <div class="f1">
         <img src = "Images/forest.jpg" style="height: 65vh; width: 100%;">
@@ -628,37 +643,25 @@ padding: 10px 15px;
     </div>
 </div>
 
-<h1 style="font-family: 'Texturina', serif;text-align: center;font-size: 50px;margin-bottom: 25px; margin-top: 10vh;">KEY SPECIES</h1>
+<div class="key">
+  <h1>KEY SPECIES</h1>
+</div>
 <div id="circle-container">
     <div class="circle">
-      <img src="Images/noaa-em7gIbjEL0I-unsplash.jpg" alt="" />
+      <img src="Images/mosses.jpg" />
     </div>
     <div class="circle">
-      <img src="Images/forest.jpg" alt="" />
+      <img src="Images/redpanda.jpeg" alt="" />
     </div>
     <div class="circle">
-      <img src="Images/flora1.jpg" alt="" />
+      <img src="Images/Gold-of-Kinablu-Orchid.jpeg" alt="" />
     </div>
     <div class="circle">
-      <img src="Images/flora.jpg" alt="" />
+      <img src="Images/galapagos.jpg" alt="" />
     </div>
   </div>
 </div>
 
-<div class="text2">
-    <div class="t">
-        <h2>hfbv</h2>
-    </div>
-    <div class="t">
-        <h2>hfbv</h2>
-    </div>
-    <div class="t">
-        <h2>hfbv</h2>
-    </div>
-    <div class="t">
-        <h2>hfbv</h2>
-    </div>
-</div>
 
 <footer class="footer-section" id="ABOUTUS">
     <div class="container">
@@ -734,7 +737,7 @@ padding: 10px 15px;
                 <div class="col-xl-4 col-lg-4 col-md-6 mb-50">
                     <div class="footer-widget">
                         <div class="footer-widget-heading">
-                            <h3>Subscribe</h3>
+                            <h3>E-Newsletter</h3>
                         </div>
                         <div class="footer-text mb-25">
                             <p>Don’t miss to subscribe to our new feeds, kindly fill the form below.</p>
@@ -798,4 +801,3 @@ function showSlides() {
 
 </body>
 </html>
-
