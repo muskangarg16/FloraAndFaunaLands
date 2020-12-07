@@ -25,7 +25,10 @@ html{
   scroll-padding-top: 50px;
 }
 body {font-family: Verdana, sans-serif;}
-.mySlides {display: none;}
+.mySlides {
+  display: none;
+  position: relative;
+  }
 img {
 vertical-align: middle;}
 
@@ -204,13 +207,14 @@ padding: 10px 15px;
     background-color: white;
     display: flex;
     justify-content: space-evenly;
-
+    margin-bottom: 30px;
 }
 .box{
     width: 100%;
-    height: 50vh;
+    height: 70vh;
     float: left;
-    padding: 10px 15px;  
+    padding: 10px 20px; 
+    
 }
 
 .round{
@@ -227,10 +231,11 @@ padding: 10px 15px;
     color: gold;
     font-size: 100px;
 }
-.round p{
-    text-align: center;
+.box p{
+    text-align: justify;
     font-size: 10px;
 }
+
 .types{
     width: 100%;
     height: 67vh;
@@ -515,11 +520,17 @@ padding: 10px 15px;
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 480px) {
   .text {
-    font-size: 11px;
+    font-size: 30px;
     }
   .header ul li a{
     display: none;
     }
+  .glow-on-hover{
+    position: absolute;
+    top: 60vh;
+    left:15vh;
+  }
+  
 }
 
 
@@ -572,7 +583,7 @@ padding: 10px 15px;
         <div class="round">
             <i class="fa fa-pagelines" aria-hidden="true"></i>
         </div>
-            <br><h2 style="color: rgb(20, 131, 79);font-family: 'Texturina', serif;text-align: center;">Grow the Green Bed.</h2><br>
+            <br><h2 style="color: rgb(20, 131, 79);font-family: 'Texturina', serif;text-align: center;">Join our green revolution.</h2><br>
             <p>Understand the importance of plants with us and spread greenery.</p>
     </div>
     <div class="box">
